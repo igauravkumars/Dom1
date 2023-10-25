@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Masai School Application</h1>
+  <p>Enter Your name and gender to apply for masai school</p>
+  <h2 id="display">Display entered name and gender here</h2>
+  <hr>
+  <input type="text" id ="name" placeholder="Enter your name">
+  <select id="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <button id="click">Apply</button>
+</body>
+</html>
+<script>
+    document.getElementById('click').addEventListener('click', function() {
+    // Get the values entered by the user
+    var name = document.getElementById('name').value;
+    var gender = document.getElementById('gender').value;
+
+    // Update the H2 tag with the entered name and gender
+    document.getElementById('display').textContent = 'Entered Name: ' + name + ', Gender: ' + gender;
+  });
+
+</script>
